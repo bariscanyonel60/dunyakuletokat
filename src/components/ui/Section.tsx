@@ -6,7 +6,7 @@ type SectionProps = {
   className?: string;
   containerClassName?: string;
   id?: string;
-  tone?: "dark" | "elevated" | "light" | "mist" | "sky" | "stone" | "dusk";
+  tone?: "dark" | "elevated" | "light" | "mist" | "sky" | "stone" | "dusk" | "process";
   grid?: boolean;
 };
 
@@ -18,6 +18,7 @@ const toneClass: Record<NonNullable<SectionProps["tone"]>, string> = {
   sky: "section-sky text-ink",
   stone: "section-stone text-ink-dark",
   dusk: "section-dusk",
+  process: "section-process overflow-hidden",
 };
 
 export function Section({

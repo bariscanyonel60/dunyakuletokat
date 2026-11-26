@@ -24,7 +24,7 @@
   --text-on-light: #1e3550;
   --text-muted-on-light: #5a6f86;
   --radius: 0.5rem;
-  --header-h: 4.25rem;
+  --header-h: 5rem;
 }
 
 @utility py-18 {
@@ -63,6 +63,7 @@
   --color-ink-dark-muted: var(--text-muted-on-light);
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
+  --font-nav: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
   --radius-card: var(--radius);
 }
@@ -109,6 +110,10 @@ body {
   font-family: var(--font-space-grotesk), var(--font-inter), system-ui, sans-serif;
 }
 
+.font-nav {
+  font-family: var(--font-outfit), var(--font-space-grotesk), system-ui, sans-serif;
+}
+
 .tech-grid {
   background-image:
     linear-gradient(to right, rgba(91, 143, 191, 0.08) 1px, transparent 1px),
@@ -130,6 +135,27 @@ body {
 .section-stone {
   background:
     linear-gradient(180deg, #f5f1ea 0%, #ebe4d8 100%);
+}
+
+.section-process {
+  background:
+    radial-gradient(1000px 480px at 12% 0%, rgba(91, 143, 191, 0.35), transparent 55%),
+    radial-gradient(900px 520px at 92% 18%, rgba(245, 158, 11, 0.22), transparent 50%),
+    radial-gradient(700px 400px at 50% 110%, rgba(245, 158, 11, 0.12), transparent 55%),
+    linear-gradient(165deg, #1a3148 0%, #243f5c 42%, #1e3550 72%, #15283c 100%);
+  color: var(--text-on-dark);
+}
+
+.section-process::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 88%);
 }
 
 .section-dusk {
