@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dünya Kule — Kurumsal Web Sitesi
 
-## Getting Started
+Tokat merkezli **Dünya Kule Hizmetleri San. ve Tic. Ltd. Şti.** için Next.js (App Router) + TypeScript + Tailwind kurumsal site.
 
-First, run the development server:
+## Kurulum
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcı: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Ortam değişkenleri
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Değişken | Açıklama |
+|----------|----------|
+| `NEXT_PUBLIC_SITE_URL` | Canonical / sitemap taban URL |
+| `RESEND_API_KEY` | Resend API anahtarı |
+| `CONTACT_TO_EMAIL` | İletişim formu alıcısı |
+| `CAREER_TO_EMAIL` | Kariyer formu alıcısı |
+| `EMAIL_FROM` | Doğrulanmış gönderen adresi |
 
-## Learn More
+`RESEND_API_KEY` yoksa geliştirmede e-posta simüle edilir; üretimde form hata döner.
 
-To learn more about Next.js, take a look at the following resources:
+## İçerik güncelleme
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tüm metinler ve firma bilgileri tek dosyada:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[`src/content/site.ts`](src/content/site.ts)
 
-## Deploy on Vercel
+- `TODO` ve `[XX]` / `[İl — TODO]` gibi işaretler gerçek değer bekler.
+- Operatör / müşteri marka adları bilerek kullanılmaz.
+- Görseller: `public/images/` altındaki SVG yer tutucuları gerçek saha fotoğraflarıyla değiştirin (aynı dosya adlarını koruyun veya `site.ts` içindeki yolları güncelleyin).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scriptler
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev      # geliştirme
+npm run build    # üretim derlemesi
+npm run start    # üretim sunucusu
+npm run lint     # ESLint
+npm run format   # Prettier
+```
+
+## Deploy (Vercel)
+
+1. Repoyu Vercel’e bağlayın.
+2. Ortam değişkenlerini Vercel dashboard’da tanımlayın.
+3. Framework preset: Next.js (varsayılan). `output: 'export'` kullanılmaz; Server Action formlar için Node runtime gerekir.
+
+## Klasör yapısı
+
+```text
+src/
+  app/                 # sayfalar, actions, sitemap, robots
+  components/
+    ui/ layout/ sections/ forms/
+  content/site.ts      # içerik katmanı
+  lib/                 # seo, schema, email, validations
+public/images/         # görsel yer tutucular
+```
+
+## Erişilebilirlik ve performans
+
+- `lang="tr"`, Türkçe metadata, JSON-LD
+- `prefers-reduced-motion` desteği
+- Focus stilleri, anlamlı alt metinler
+- Hedef: Lighthouse ≥ 95 (mobil) — gerçek görseller ve domain sonrası tekrar ölçün

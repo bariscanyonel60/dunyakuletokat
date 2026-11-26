@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+<rect width="640" height="400" fill="#101c28"/><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#6b889b" opacity=".28"/></pattern></defs>
+<rect width="640" height="400" fill="url(#grid)"/><path d="M27 60V27H60M580 27h33v33m0 280v33h-33m-520 0H27v-33" fill="none" stroke="#9db0ba" opacity=".5"/><g fill="none" stroke="#7893a1" stroke-width="2"><path d="M112 318h416M176 307V92l63-18h190v231H239Z M239 74v231 M257 104h150v69H257Z M257 194h150v83H257Z" fill="#192b37"/><path d="M269 151h24l9-16 10 16h16l12-24 11 24h43" stroke="#f59e0b"/><path d="M273 213h116m-116 15h116m-116 15h116m-116 15h116M429 115l56-31h60m-116 150 56 31h60" opacity=".7"/><circle cx="429" cy="115" r="5" stroke="#f59e0b"/><circle cx="429" cy="234" r="5" stroke="#f59e0b"/></g>
+</svg>

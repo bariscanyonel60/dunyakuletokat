@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+<rect width="640" height="400" fill="#101c28"/><defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#6b889b" opacity=".28"/></pattern></defs>
+<rect width="640" height="400" fill="url(#grid)"/><path d="M27 60V27H60M580 27h33v33m0 280v33h-33m-520 0H27v-33" fill="none" stroke="#9db0ba" opacity=".5"/><defs><linearGradient id="dawn" x2="0" y2="1"><stop stop-color="#192734"/><stop offset="1" stop-color="#aa7951"/></linearGradient></defs><rect width="640" height="400" fill="url(#dawn)"/><path d="M0 260 90 220 168 249 260 183 365 229 456 188 560 223 640 165V400H0Z" fill="#48515a"/><path d="M0 302 132 260 203 283 324 235 445 277 580 218 640 241V400H0Z" fill="#2d3942"/><g color="#c0b7a5"><g transform="translate(402 38) scale(0.45)">
+    <path d="M-84 650 -14 114 14 114 84 650Z" fill="#18232c" fill-opacity=".7"/>
+    <path d="M-84 650 -14 114 14 114 84 650M-33 650 0 114 45 650" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="M0 0V116M-57 65H57M-49 108H49M-41 155H41" stroke="currentColor" stroke-width="4"/>
+    <path d="M-5 45H5V108H-5Z M-64 40H-51V96H-64Z M51 34H65V94H51Z M-52 113H-41V164H-52Z M41 106H53V161H41Z" fill="currentColor"/>
+    <circle r="3" fill="#f59e0b"/>
+    <g fill="none" stroke="currentColor" stroke-width="1.7" opacity=".8">
+    <path d="M-16.0 125H16.0L-23.6 183H23.6Z"/><path d="M-23.6 183H23.6L-31.200000000000003 241H31.200000000000003Z"/><path d="M-31.2 241H31.2L-38.8 299H38.8Z"/><path d="M-38.8 299H38.8L-46.4 357H46.4Z"/><path d="M-46.4 357H46.4L-54.0 415H54.0Z"/><path d="M-54.0 415H54.0L-61.6 473H61.6Z"/><path d="M-61.599999999999994 473H61.599999999999994L-69.19999999999999 531H69.19999999999999Z"/><path d="M-69.19999999999999 531H69.19999999999999L-76.8 589H76.8Z"/><path d="M-76.8 589H76.8L-84.4 647H84.4Z"/>
+    </g></g></g><path d="M0 342 136 332 243 302 380 310 480 292 640 351V400H0Z" fill="#19262f"/><path d="M475 303v-49l53-13 31 14v51l-32 9Z" fill="#6f7773" stroke="#a69b80"/><path d="M527 242v73m9-46h14m-14 7h14m-14 7h14" stroke="#293843"/>
+</svg>
